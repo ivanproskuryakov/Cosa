@@ -1,0 +1,27 @@
+{% extends '::page.html.twig' %}
+
+{% block title %}{{ page.page.title }} - {{ parent() }}{% endblock %}
+{% block headingTitle %} {{ page.page.title }}{% endblock %}
+
+{% block body %}
+
+    <div class="page-header">
+        <h3>{{ page.page.title }}</h3>
+    </div>
+    <p class="postDate">{% autoescape false %}{{ page.page.createdAt|date('Y-m-d H:i:s') }}{% endautoescape %}</p>
+
+    <p>{% autoescape false %}{{ page.page.content }}{% endautoescape %}</p>
+
+    {% if page.categories %}
+        <p>
+            <strong> {{ 'page.label.post_categories'|trans({}, 'CosaPageBundle') }}: </strong>
+            {% for category in page.categories %}
+                <a href="{{ path('cosa_categoryview', {'urlKey': category.url}) }}">{{ category.title }}</a>
+            {% endfor %}
+        <p>
+    {% endif %}
+
+
+    {#{{ dump(page) }}#}
+
+{% endblock %}

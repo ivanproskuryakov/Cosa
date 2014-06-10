@@ -1,0 +1,48 @@
+user:
+  label:
+    my_account: Мой аккаунт
+    detailed_information: Детальная информация
+    user_account: Аккаунт
+    payments: Платежи
+    log_out: Выйти
+    menu: Меню
+    username: Имя пользователя
+    password: Пароль
+    sign_in: Войти
+    password_forgot: Забыли пароль?
+    create_account: Создать аккаунт
+    email: E-mail
+    new_password: Новый пароль
+    new_password_repeat: Повторите новый пароль
+    password_repeat: Повторите пароль
+    change_password: Сменить пароль
+    worker: Воркер для майнинга
+    worker_pass: пароль
+    settings: Настройки
+    old_password: Текущий пароль
+
+    user_id: ID в системе
+    last_login: Последный вход
+
+  email:
+    new_account: Аккаунт успешно содан
+    password_updated: Новый пароль
+    account_created: Добрый день! Ваш акаунт был успешно создан
+    new_password: Добрый день! ваш пароль был изменен
+    thanks: Спасибо!
+
+  form:
+    submit: Отправить
+
+  flash:
+    error:
+      wrong_login: Неверное имя пользователя или пароль
+      register_email_busy: Email или имя пользователя уже заняты
+      not_found: Юзер не найден
+      password_wrong: Не верный пароль
+    success:
+      login_success: Вы успешно зашли на сайт
+      register_success: Поздравляем! Ваш аккаунт был создан
+      password_changed: Ваш пароль был изменен
+    notice:
+      password_sent: Новый пароль отправлен на почту

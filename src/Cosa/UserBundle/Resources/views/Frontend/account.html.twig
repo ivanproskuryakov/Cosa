@@ -1,0 +1,21 @@
+{% extends 'CosaUserBundle:Frontend:base.html.twig' %}
+{% block headingTitle %}
+    {{ 'user.label.my_account'|trans({}, 'CosaUserBundle') }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h3>
+            {{ 'user.label.detailed_information'|trans({}, 'CosaUserBundle') }}
+        </h3>
+    </div>
+    <p><strong>{{ 'user.label.user_id'|trans({}, 'CosaUserBundle') }}:</strong> {{ user.id  }}</p>
+    <p><strong>{{ 'user.label.username'|trans({}, 'CosaUserBundle') }}:</strong> {{ user.username  }}</p>
+    <p><strong>{{ 'user.label.email'|trans({}, 'CosaUserBundle') }}:</strong> {{ user.email  }}</p>
+    <p><strong>{{ 'user.label.last_login'|trans({}, 'CosaUserBundle') }}:</strong> {{ user.lastLogin|date('Y-m-d')  }}</p>
+
+
+    <a href="{{ path('cosa_user_passwordchange') }}">{{ 'user.label.change_password'|trans({}, 'CosaUserBundle') }}</a> <br/>
+
+{% endblock %}

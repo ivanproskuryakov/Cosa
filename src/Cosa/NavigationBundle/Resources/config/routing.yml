@@ -1,0 +1,13 @@
+api_cosa_navigationmenu:
+    pattern:  /api/navigation/menu.json
+    defaults: { _controller: CosaNavigationBundle:Api:menu, _format: json }
+    requirements:
+        _method: GET
+
+cosa_menu_tree_up:
+    pattern:  /administration/cosa/navigation/menu/up/{id}
+    defaults:  { _controller: CosaNavigationBundle:MenuSort:up }
+
+cosa_menu_tree_down:
+    pattern:  /administration/cosa/navigation/menu/down/{id}
+    defaults:  { _controller: CosaNavigationBundle:MenuSort:down }

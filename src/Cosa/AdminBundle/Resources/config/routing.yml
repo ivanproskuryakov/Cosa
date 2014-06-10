@@ -1,0 +1,5 @@
+api_cosa_config:
+    pattern:  /api/config/settings.json
+    defaults: { _controller: CosaAdminBundle:Api:config, _format: json }
+    requirements:
+        _method: GET

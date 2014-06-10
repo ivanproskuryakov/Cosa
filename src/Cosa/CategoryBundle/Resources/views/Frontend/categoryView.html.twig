@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ category.title }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <div class="page-header">
+        <h3>{{ category.title }}</h3>
+        <small>{{ category.description }}</small>
+    </div>
+
+    {% if pagination.items %}
+        {% for page in pagination %}
+            <div>
+                <h2><a href="{{ path('cosa_pageview', {'urlKey': page.metaUrl}) }}">{{ page.title }}</a></h2>
+                <p>{% autoescape false %}{{ page.content }}{% endautoescape %}</p>
+            </div>
+        {% endfor %}
+
+        <div class="navigation">
+            <div class="pull-left">
+                <div class="pager">
+                    {{ 'category.label.total'|trans({}, 'CosaCategoryBundle') }}: {{ pagination.getTotalItemCount }}
+                </div>
+            </div>
+            <div class="pull-right">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
+
+        </div>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+#services:
+#    sonata.admin.post:
+#        class: Cosa\PageBundle\Admin\PageAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Page" }
+#        arguments:
+#            - ~
+#            - Cosa\PageBundle\Entity\Page
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [CosaPageBundle]]

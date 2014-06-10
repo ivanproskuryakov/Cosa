@@ -1,0 +1,3 @@
+cosa_homepage:
+    pattern:  /
+    defaults: { _controller: CosaFrontendBundle:Frontend:index, _format: ~ }

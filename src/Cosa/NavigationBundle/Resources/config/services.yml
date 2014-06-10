@@ -1,0 +1,18 @@
+parameters:
+    cosa_navigation_manager.class: Cosa\NavigationBundle\Manager\NavigationManager
+
+services:
+    sonata.admin.navigation:
+        class: Cosa\NavigationBundle\Admin\NavigationAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Navigation", label: "Menu" }
+        arguments:
+            - ~
+            - Cosa\NavigationBundle\Entity\Menu
+            - ~
+        calls:
+            - [ setTranslationDomain, [CosaNavigationBundle]]
+
+    cosa.navigation.manager:
+        class: %cosa_navigation_manager.class%
+        arguments: [@service_container, @doctrine.orm.entity_manager]

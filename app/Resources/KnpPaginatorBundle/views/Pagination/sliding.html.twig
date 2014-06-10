@@ -1,0 +1,55 @@
+{#
+
+This file is part of the Cosa package.
+
+(c) Ivan Proskuryakov
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% if pageCount > 1 %}
+    <ul class="pager">
+        {#{% if first is defined and current != first %}#}
+            {#<li class="first">#}
+                {#<a href="{{ path(route, query|merge({(pageParameterName): first})) }}">&lt;&lt;</a>#}
+            {#</li>#}
+        {#{% endif %}#}
+
+        {% if previous is defined %}
+            {#<ul class="pager">#}
+                {#<li class="previous disabled"><a href="#">&larr; Older</a></li>#}
+                {#<li class="next"><a href="#">Newer &rarr;</a></li>#}
+            {#</ul>#}
+            <li class="previous">
+                <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&larr; {% trans %}Older{% endtrans %}</a>
+            </li>
+        {% endif %}
+
+        {#{% for page in pagesInRange %}#}
+            {#{% if page != current %}#}
+                {#<span class="page">#}
+                    {#<a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a>#}
+                {#</span>#}
+            {#{% else %}#}
+                {#<span class="current">{{ page }}</span>#}
+            {#{% endif %}#}
+
+        {#{% endfor %}#}
+
+        {% if next is defined %}
+            <li class="next pull-right">
+                <a href="{{ path(route, query|merge({(pageParameterName): next})) }}">{% trans %}Newer{% endtrans %} &rarr;</a>
+            </li>
+        {% endif %}
+
+        {#{% if last is defined and current != last %}#}
+            {#<span class="last">#}
+                {#<a href="{{ path(route, query|merge({(pageParameterName): last})) }}">&gt;&gt;</a>#}
+            {#</span>#}
+        {#{% endif %}#}
+
+    </ul>
+
+{% endif %}

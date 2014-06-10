@@ -1,0 +1,80 @@
+{
+    "name": "aisel/aisel",
+    "license": "MIT",
+    "type": "project",
+    "homepage":    "http://aisel.co",
+    "description": "Aisel - Open source CMS based on Angular and Symfony2",
+    "authors": [
+        {
+            "name":     "Ivan Proskuryakov",
+            "homepage": "http://ivanproskuryakov.com/"
+        },
+        {
+            "name":     "Aisel Project",
+            "homepage": "http://aisel.co"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "~2.4",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+        "twig/extensions": "~1.0",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "stof/doctrine-extensions-bundle": "dev-master",
+
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "~2.3",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "friendsofsymfony/user-bundle": "~1.3",
+        "friendsofsymfony/rest-bundle": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "egeloen/ckeditor-bundle": "~2.0",
+
+        "sonata-project/easy-extends-bundle": "~2.1@dev",
+        "sonata-project/admin-bundle": "~2.2@dev",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.2@dev",
+        "sonata-project/block-bundle": "~2.2@dev",
+        "sonata-project/user-bundle": "~2.2@dev",
+        "sonata-project/core-bundle": "~2.2@dev",
+        "jms/serializer-bundle": "dev-master",
+        "twbs/bootstrap": "v2.3.2",
+        "presta/sonata-navigation-bundle": "dev-master",
+        "knplabs/knp-paginator-bundle": "~2.4",
+        "pinano/bootstrap3-bundle": "dev-master"
+
+
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}

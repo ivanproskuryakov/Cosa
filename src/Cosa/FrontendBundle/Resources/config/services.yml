@@ -1,0 +1,14 @@
+parameters:
+    cosa_frontend_manager.class: Cosa\FrontendBundle\Manager\FrontendManager
+    cosa_meta_extension.class: Cosa\FrontendBundle\Twig\MetaExtension
+
+services:
+    cosa.frontend.manager:
+        class: %cosa_frontend_manager.class%
+        arguments: [@doctrine.orm.entity_manager ]
+
+    cosa.twig.meta_extension:
+        class: %cosa_meta_extension.class%
+        arguments: [@cosa.frontend.manager ]
+        tags:
+            - { name: twig.extension }

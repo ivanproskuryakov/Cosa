@@ -1,0 +1,63 @@
+
+cosa_user_register:
+    pattern:  /user/register/
+    defaults: { _controller: CosaUserBundle:FrontendUser:register }
+
+cosa_user_login:
+    pattern:  /user/login/
+    defaults: { _controller: CosaUserBundle:FrontendUser:login }
+
+cosa_user_logout:
+    pattern:  /user/logout/
+
+cosa_user_passwordforgot:
+    pattern:  /user/password/forgot/
+    defaults: { _controller: CosaUserBundle:FrontendUser:forgotPassword }
+
+cosa_user_passwordchange:
+    pattern:  /user/password/change/
+    defaults: { _controller: CosaUserBundle:FrontendUser:changePassword }
+
+cosa_user_account:
+    pattern:  /user/account/
+    defaults: { _controller: CosaUserBundle:FrontendUser:account }
+
+
+#Roures for API
+#api_cosa_user_login:
+#    pattern:  /api/user/login.json
+#    defaults: { _controller: CosaUserBundle:Api:login, _format: json }
+#    requirements:
+#        _method: GET
+#
+#api_cosa_user_logout:
+#    pattern:  /api/user/logout.json
+#    defaults: { _controller: CosaUserBundle:Api:logout, _format: json }
+#    requirements:
+#        _method: GET
+#
+#api_cosa_user_information:
+#    pattern:  /api/user/information.json
+#    defaults: { _controller: CosaUserBundle:Api:information, _format: json }
+#    requirements:
+#        _method: GET
+#
+#api_cosa_user_register:
+#    pattern:  /api/user/register.json
+#    defaults: { _controller: CosaUserBundle:Api:register, _format: json }
+#    requirements:
+#        _method: GET
+
+
+# Forget about it.. we dont need it
+#login:
+#    pattern:   /login
+#    defaults:  { _controller: CosaUserBundle:Security:login }
+#login_check:
+#    pattern:   /login_check
+#logout:
+#    pattern:   /logout
+#
+#test_security:
+#    pattern: /secure_area
+#    defaults: {_controller: CosaUserBundle:Security:dumpString }

@@ -1,0 +1,51 @@
+{#
+
+This file is part of the Cosa package.
+
+(c) Ivan Proskuryakov
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+    <div class="navbar navbar-inverse navbar-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('cosa_homepage') }}">{{ application.name }}</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                {{ knp_menu_render('CosaNavigationBundle:Builder:topMenu',{'template': 'CosaNavigationBundle:Menu:topmenu.html.twig'}) }}
+
+                {% if is_granted("ROLE_USER") %}
+                    <ul class="nav navbar-nav navbar-right usermenu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ app.user.username }}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('cosa_user_account') }}">{% trans %}My Account{% endtrans %}</a></li>
+                                <li><a href="{{ path('cosa_user_logout') }}">{% trans %}Sign Out{% endtrans %}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="nav navbar-nav navbar-right usermenu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}My Account{% endtrans %} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('cosa_user_login') }}">{% trans %}Sigh In{% endtrans %}</a></li>
+                                <li><a href="{{ path('cosa_user_register') }}">{% trans %}Create Account{% endtrans %}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>

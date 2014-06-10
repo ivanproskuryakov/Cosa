@@ -1,0 +1,41 @@
+{#
+
+This file is part of the Cosa package.
+
+(c) Ivan Proskuryakov
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'head.html.twig' %}
+</head>
+<body class="page">
+
+
+{% block heading %}
+    <div class="heading">
+        <div class="container">
+            <h1>{% block headingTitle %} {{ application.name }} {% endblock %}</h1>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing mainContent">
+
+    {% include 'flash.html.twig' %}
+
+    {% block body %}{% endblock %}
+</div>
+
+{% include 'footer.html.twig' %}
+</body>
+</html>

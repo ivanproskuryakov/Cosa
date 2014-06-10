@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Page - {{ parent() }}{% endblock %}
+{% block headingTitle %} Page Listing {% endblock %}
+
+{% block body %}
+
+    {% for page in pagination %}
+        <div>
+            <h2><a href="{{ path('cosa_pageview', {'urlKey': page.metaUrl}) }}">{{ page.title }}</a></h2>
+            <p>{% autoescape false %}{{ page.content }}{% endautoescape %}</p>
+            <p class="postDate pull-right">{% autoescape false %}{{ page.createdAt|date('Y-m-d H:i:s') }}{% endautoescape %}</p>
+        </div>
+    {% endfor %}
+
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }} {{ 'page.label.total'|trans({}, 'CosaPageBundle') }}: {{ pagination.getTotalItemCount }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+user:
+  label:
+    my_account: My account
+    detailed_information: Detailed Information
+    user_account: User Account
+    payments: Payments
+    log_out: Log Out
+    menu: Menu
+    username: Username
+    password: Password
+    sign_in: Sign In
+    password_forgot: Forgot Password?
+    create_account: Create Account
+    email: E-mail
+    new_password: Your Password
+    new_password_repeat: Password Repeat
+    change_password: Change Password
+    password_repeat: Repeat password
+    settings : Settings
+
+    user_id: User Id
+    last_login: Last Login
+
+  form:
+    submit: Submit
+
+  email:
+    account_created: Hello! Your account has been created!
+    new_password: Hello! Your password has been changed, new password goes bellow
+    thanks: Thanks!
+
+  flash:
+    error:
+      wrong_login: Wrong username or password
+      register_email_busy: Email or username is busy
+      not_found: User not found
+      password_wrong: Wrong password
+    success:
+      login_success: Successfully logged in
+      register_success: Your account has been created
+      password_changed: Your password has beem changed
+    notice:
+      password_sent: New password has been sent

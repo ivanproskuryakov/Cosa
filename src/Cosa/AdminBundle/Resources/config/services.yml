@@ -1,0 +1,7 @@
+parameters:
+    cosa_adminconfig_manager.class: Cosa\AdminBundle\Manager\AdminConfigManager
+
+services:
+    cosa.adminconfig.manager:
+        class: %cosa_adminconfig_manager.class%
+        arguments: [@doctrine.orm.entity_manager ]

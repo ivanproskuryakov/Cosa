@@ -1,0 +1,7 @@
+parameters:
+    cosa_contact_manager.class: Cosa\ContactBundle\Manager\ContactManager
+
+services:
+    cosa.contact.manager:
+        class: %cosa_contact_manager.class%
+        arguments: [@doctrine.orm.entity_manager, @mailer, @templating,  %application.email% ]

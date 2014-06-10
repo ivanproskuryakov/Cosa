@@ -1,0 +1,69 @@
+Cosa\PageBundle\Entity\Page:
+    type: entity
+    table: cosa_page
+    repositoryClass: Cosa\PageBundle\Entity\PageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        content:
+            type: text
+        status:
+            type: boolean
+            column: status
+        isHidden:
+            type: boolean
+            column: is_hidden
+        commentStatus:
+            type: boolean
+            nullable: true
+            column: comment_status
+        metaUrl:
+            type: string
+            unique: true
+            length: 255
+            column: meta_url
+        metaTitle:
+            type: string
+            nullable: true
+            length: 255
+            column: meta_title
+        metaDescription:
+            nullable: true
+            type: string
+            length: 255
+            column: meta_description
+        metaKeywords:
+            type: string
+            nullable: true
+            length: 255
+            column: meta_keywords
+
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+
+    manyToMany:
+      categories:
+        targetEntity: Cosa\CategoryBundle\Entity\Category
+        joinTable:
+          name: cosa_page_category
+          joinColumns:
+            page_id:
+              referencedColumnName: id
+          inverseJoinColumns:
+            category_id:
+              referencedColumnName: id
+#    lifecycleCallbacks: {  }
+#    lifecycleCallbacks:
+#      prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+#      postPersist: [ doStuffOnPostPersist ]

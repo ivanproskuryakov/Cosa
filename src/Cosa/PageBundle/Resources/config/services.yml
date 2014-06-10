@@ -1,0 +1,35 @@
+parameters:
+    cosa_page_manager.class: Cosa\PageBundle\Manager\PageManager
+    cosa_search_manager.class: Cosa\PageBundle\Manager\SearchManager
+
+services:
+    sonata.admin.page:
+        class: Cosa\PageBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Pages" }
+        arguments:
+            - ~
+            - Cosa\PageBundle\Entity\Page
+            - ~
+        calls:
+            - [ setTranslationDomain, [CosaPageBundle]]
+            - [ setManager, [@cosa.page.manager]]
+
+    cosa.page.manager:
+        class: %cosa_page_manager.class%
+        arguments: [@service_container, @doctrine.orm.entity_manager]
+
+    cosa.search.manager:
+        class: %cosa_search_manager.class%
+        arguments: [@doctrine.orm.entity_manager]
+
+#    cosa.page.admin:
+#        class: Cosa\PageBundle\Admin\PageAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Page" }
+#        arguments:
+#            - ~
+#            - Cosa\PageBundle\Entity\Page
+#            - ~
+#        calls:
+#            - [ setPageManager, ['@doctrine.orm.entity_manager']]

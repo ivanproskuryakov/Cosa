@@ -1,0 +1,21 @@
+contact:
+  label:
+    contact_us: Связаться с нами
+    your_contacts: Ваши контакты
+    name: Название
+    email: Email
+    address: Адрес
+    information: Информация
+    message: Сообщение
+
+  form:
+    your_name: Ваше имя
+    your_email: Ваш e-mail
+    phone: Телефон
+    submit: Отправить
+
+  flash:
+    error:
+      message_not_sent: Письмо не отправлено, что то пошло не так
+    success:
+      message_sent: Письмо отправлено

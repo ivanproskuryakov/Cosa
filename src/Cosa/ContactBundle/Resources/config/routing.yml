@@ -1,0 +1,9 @@
+#api_cosa_contactsend:
+#    pattern:  /api/contact/send.json
+#    defaults: { _controller: CosaContactBundle:Api:send, _format: json }
+#    requirements:
+#        _method: GET
+
+cosa_contact:
+    pattern:  /contact/
+    defaults: { _controller: CosaContactBundle:Frontend:view}

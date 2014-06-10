@@ -1,0 +1,19 @@
+parameters:
+    cosa_category_manager.class: Cosa\CategoryBundle\Manager\CategoryManager
+
+services:
+    sonata.admin.category:
+        class: Cosa\CategoryBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Categories" }
+        arguments:
+            - ~
+            - Cosa\CategoryBundle\Entity\Category
+            - ~
+        calls:
+            - [ setTranslationDomain, [CosaCategoryBundle]]
+            - [ setManager, [@cosa.category.manager]]
+
+    cosa.category.manager:
+        class: %cosa_category_manager.class%
+        arguments: [@service_container, @doctrine.orm.entity_manager]

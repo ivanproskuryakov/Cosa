@@ -1,0 +1,37 @@
+{#
+
+This file is part of the Cosa package.
+
+(c) Ivan Proskuryakov
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+<meta charset="UTF-8"/>
+<title>{% block title %}{{ defaultTitle() }}{% endblock %}</title>
+<meta name="description" content="{{ defaultDescription() }}">
+<meta name="keywords" content="{{ defaultKeywords() }}">
+
+{% block javascripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% javascripts
+    '@PinanoBootstrap3Bundle/Resources/public/js/bootstrap.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+        {% block stylesheets %}
+            {% stylesheets filter='cssrewrite'
+            'bundles/pinanobootstrap3/css/bootstrap.css'
+            %}
+            <link rel="stylesheet" href="{{ asset_url }}"/>
+
+            {% endstylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/carousel.css') }}"/>
+
+        {% endblock %}
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+<script data-require="prefixfree@*" data-semver="1.0.7"
+        src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>

@@ -1,0 +1,21 @@
+navigation:
+    system:
+        label: Система
+        backenduser:
+            label: Админы
+        frontenduser:
+            label: Пользователи
+        settings:
+            label: Настройки
+    cms:
+        label: CMS
+        page:
+            label: Страницы
+        category:
+            label: Категории
+        menu:
+            label: Меню
+    payment:
+        label: Платежи
+        payment:
+            label: Платежи

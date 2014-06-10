@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+
+    <div class="col-xs-12 col-sm-8">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="col-xs-4 col-sm-4" id="sidebar">
+        <br class="divider">
+        <div class="sidebar-offcanvas jumbotron">
+            {% block usernavigation %}
+                <h3>{{ 'user.label.menu'|trans({}, 'CosaUserBundle') }}</h3>
+                <a href="{{ path('cosa_user_account') }}">{{ 'user.label.user_account'|trans({}, 'CosaUserBundle') }}</a> <br/>
+                <a href="{{ path('cosa_user_logout') }}">{{ 'user.label.log_out'|trans({}, 'CosaUserBundle') }}</a> <br/>
+            {% endblock %}
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+parameters:
+    application.name: Cosa
+    application.version: 0.0.3
+    application.email: service@mail.com
+    sonata.user.admin.groupname: System
+    sonata.user.admin.user.entity: Cosa\UserBundle\Entity\BackendUser
+    sonata.user.admin.user.class: Cosa\UserBundle\Admin\BackendUserAdmin
+
+aisel_config:
+    route_prefix: config_
+    entities:
+        homepage:
+            order: 0
+            controller: CosaAdminBundle:ConfigHomepage:modify
+        meta:
+            order: 10
+            controller: CosaAdminBundle:ConfigMeta:modify
+        contact:
+            order: 20
+            controller: CosaContactBundle:Config:modify

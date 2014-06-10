@@ -1,0 +1,34 @@
+api_cosa_pagelist:
+    pattern:  /api/page/list.json
+    defaults: { _controller: CosaPageBundle:Api:pageList, _format: json }
+    requirements:
+        _method: GET
+
+api_cosa_pageview:
+    pattern:  /api/page/view/{urlKey}.json
+    defaults: { _controller: CosaPageBundle:Api:pageView, _format: json }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+
+cosa_pagelist:
+    pattern:  /page/list/
+    defaults: { _controller: CosaPageBundle:Frontend:pageList }
+    requirements:
+        _method: GET
+
+cosa_pageview:
+    pattern:  /page/{urlKey}/
+    defaults: { _controller: CosaPageBundle:Frontend:pageView }
+    requirements:
+        _method: GET
+        id: "\d+"
+
+
+api_cosa_search:
+    pattern:  /api/search/
+    defaults: { _controller: CosaPageBundle:Api:search, _format: json }
+    requirements:
+        _method: GET
+        id: "\d+"

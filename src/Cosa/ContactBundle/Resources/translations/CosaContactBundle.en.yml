@@ -1,0 +1,21 @@
+contact:
+  label:
+    contact_us: Contact Us
+    your_contacts: Your contacts
+    name: Name
+    email: Email
+    address: Address
+    information: Information
+    message: Message
+
+  form:
+    your_name: Your name
+    your_email: Your email
+    phone: Phone
+    submit: Submit
+
+  flash:
+    error:
+      message_not_sent: Message not sent, something went wrong
+    success:
+      message_sent: Message sent
