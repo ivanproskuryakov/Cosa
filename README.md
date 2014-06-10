@@ -8,15 +8,15 @@ Installation
 
 1.) Clone project and install dependencies with: <br/>
 php composer.phar install<br/>
-0.) Set parameters<br/>
+2.) Set parameters<br/>
 rename parameters.yml.dev to parameters.yml<br/>
-1.) Create database<br/>
+3.) Create database<br/>
 doctrine:database:create<br/>
-2.) Create tables<br/>
+4.) Create tables<br/>
 php app/console doctrine:schema:create<br/>
-3.) Load initial data in database with<br/>
+5.) Load initial data in database with<br/>
 php app/console doctrine:fixtures:load<br/>
-5.) Add Links to CSS and JS files<br/>
+6.) Add Links to CSS and JS files<br/>
 php app/console assets:install web --symlink
 
 Once this steps is done you will be able to access admin section from http://yourwebsitename.dev/administration/
