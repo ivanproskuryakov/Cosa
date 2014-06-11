@@ -13,9 +13,15 @@
         </div>
     {% endfor %}
 
-    {# display navigation #}
     <div class="navigation">
-        {{ knp_pagination_render(pagination) }} {{ 'page.label.total'|trans({}, 'CosaPageBundle') }}: {{ pagination.getTotalItemCount }}
+        <div class="pull-left">
+            <div class="pager">
+                {{ 'page.label.total'|trans({}, 'CosaPageBundle') }}: {{ pagination.getTotalItemCount }}
+            </div>
+        </div>
+        <div class="pull-right">
+            {{ knp_pagination_render(pagination) }}
+        </div>
     </div>
 
 {% endblock %}

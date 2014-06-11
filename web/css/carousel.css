@@ -158,6 +158,11 @@ body.page {
 .mainContent {
     min-height: 400px;
 }
+.navigation {
+    clear: both;
+    width: 100%;
+    float: left;
+}
 
 /* Pages */
 .postDate {
