@@ -23,29 +23,6 @@ file that was distributed with this source code.
             <div class="navbar-collapse collapse">
                 {{ knp_menu_render('CosaNavigationBundle:Builder:topMenu',{'template': 'CosaNavigationBundle:Menu:topmenu.html.twig'}) }}
 
-                {% if is_granted("ROLE_USER") %}
-                    <ul class="nav navbar-nav navbar-right usermenu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ app.user.username }}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ path('cosa_user_account') }}">{% trans %}My Account{% endtrans %}</a></li>
-                                <li><a href="{{ path('cosa_user_logout') }}">{% trans %}Sign Out{% endtrans %}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                {% else %}
-                    <ul class="nav navbar-nav navbar-right usermenu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans %}My Account{% endtrans %} <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ path('cosa_user_login') }}">{% trans %}Sigh In{% endtrans %}</a></li>
-                                <li><a href="{{ path('cosa_user_register') }}">{% trans %}Create Account{% endtrans %}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                {% endif %}
-
-
             </div>
         </div>
     </div>
