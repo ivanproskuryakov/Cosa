@@ -10,10 +10,6 @@ cosa_category:
     resource: "@CosaCategoryBundle/Resources/config/routing.yml"
     prefix:   /
 
-cosa_navigation:
-    resource: "@CosaNavigationBundle/Resources/config/routing.yml"
-    prefix:   /
-
 cosa_page:
     resource: "@CosaPageBundle/Resources/config/routing.yml"
     prefix:   /
@@ -25,10 +21,6 @@ cosa_admin:
 cosa_user:
     resource: "@CosaUserBundle/Resources/config/routing.yml"
     prefix:   /
-
-#cosa_payment:
-#    resource: "@CosaPaymentBundle/Resources/config/routing.yml"
-#    prefix:   /
 
 asiel_config:
     resource: .

@@ -24,14 +24,16 @@ file that was distributed with this source code.
 
         {% block stylesheets %}
             {% stylesheets filter='cssrewrite'
-            'bundles/pinanobootstrap3/css/bootstrap.css'
-            %}
+            'bundles/pinanobootstrap3/css/bootstrap.css' %}
             <link rel="stylesheet" href="{{ asset_url }}"/>
 
             {% endstylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/carousel.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('css/basic.css') }}"/>
 
         {% endblock %}
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
 <script data-require="prefixfree@*" data-semver="1.0.7"
         src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic' rel='stylesheet' type='text/css'>

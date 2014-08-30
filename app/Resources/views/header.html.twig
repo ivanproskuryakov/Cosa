@@ -9,20 +9,20 @@ file that was distributed with this source code.
 
 #}
 
-    <div class="navbar navbar-inverse navbar-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ path('cosa_homepage') }}">{{ application.name }}</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                {{ knp_menu_render('CosaNavigationBundle:Builder:topMenu',{'template': 'CosaNavigationBundle:Menu:topmenu.html.twig'}) }}
-
+    <div class="navbar" role="navigation">
+        <div class="row">
+            <div class="container">
+                <a class="navbar-logo" href="{{ path('cosa_homepage') }}">
+                    {{ application.name }}
+                    <span>SCULPTURES</span>
+                </a>
+                <div class="menu">
+                    <ul class="links">
+                        <li class="first"><span class="separator"></span><a href="#">XL</a></li>
+                        <li><span class="separator"></span><a href="#">M</a><span class="separator"></span></li>
+                        <li class="last"><a href="#">S</a><span class="separator"></span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

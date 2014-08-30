@@ -17,19 +17,8 @@ api_cosa_categorytree:
     requirements:
         _method: GET
 
-#cosa_categorylist:
-#    pattern:  /category/list/
-#    defaults: { _controller: CosaCategoryBundle:Frontend:categoryList}
 
 cosa_categoryview:
     pattern:  /category/{urlKey}/
     defaults: { _controller: CosaCategoryBundle:Frontend:categoryView }
 
-
-cosa_category_tree_up:
-    pattern:  /administration/cosa/category/category/up/{id}
-    defaults:  { _controller: CosaCategoryBundle:AdminCategorySort:up }
-
-cosa_category_tree_down:
-    pattern:  /administration/cosa/category/category/down/{id}
-    defaults:  { _controller: CosaCategoryBundle:AdminCategorySort:down }

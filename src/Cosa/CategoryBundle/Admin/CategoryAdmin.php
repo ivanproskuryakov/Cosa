@@ -149,7 +149,6 @@ class CategoryAdmin extends Admin
             ->addIdentifier('id', null,array('sortable'=>false))
             ->add('status', 'boolean', array('label' => 'Enabled','editable' => true))
             ->add('title', null, array('template' => 'CosaCategoryBundle:Admin:title.html.twig', 'label'=>'Title','sortable'=>false))
-            ->add('order', 'text', array('template' => 'CosaCategoryBundle:Admin:order.html.twig', 'label'=>'Move'))
 
             ->add('_action', 'actions', array(
                 'actions' => array(

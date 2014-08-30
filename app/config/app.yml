@@ -1,5 +1,5 @@
 parameters:
-    application.name: Cosa
+    application.name: JORGE PALACIOS
     application.version: 0.0.3
     application.email: service@mail.com
     sonata.user.admin.groupname: System

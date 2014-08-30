@@ -33,7 +33,8 @@ class LoadPageData extends AbstractFixture implements OrderedFixtureInterface
 
         $config = new Config();
         $config->setEntity('config_meta');
-        $config->setValue('{"defaultMetaTitle":"Cosa SF2", "defaultMetaDescription":"Cosa SF2","defaultMetaKeywords":"Cosa SF2"}');
+        $config->setValue('{"defaultMetaTitle":"jorgepalacios.es",
+        "defaultMetaDescription":"jorgepalacios.es","defaultMetaKeywords":"jorgepalacios.es"}');
         $manager->persist($config);
         $manager->flush();
 

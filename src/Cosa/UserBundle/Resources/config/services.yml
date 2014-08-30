@@ -3,19 +3,6 @@ services:
         abstract: true
         public: false
 
-
-    sonata.admin.user.frontend:
-        class: Cosa\UserBundle\Admin\FrontendUserAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "System", label: "Frontend Users" }
-        arguments:
-            - ~
-            - Cosa\UserBundle\Entity\FrontendUser
-            - ~
-        calls:
-            - [ setTranslationDomain, [CosaUserBundle]]
-            - [ setEncoderFactory, [ @security.encoder_factory ] ]
-
     frontend.user.manager:
         class: Cosa\UserBundle\Manager\UserManager
         arguments: [@doctrine.orm.entity_manager, @security.encoder_factory, @mailer, @templating,  %application.email%,  @translator ]

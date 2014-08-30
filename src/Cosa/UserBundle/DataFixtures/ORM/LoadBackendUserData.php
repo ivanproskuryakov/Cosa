@@ -52,9 +52,9 @@ class LoadBackendUserData extends AbstractFixture implements OrderedFixtureInter
         $time = time();
 
         $user = new BackendUser();
-        $user->setUsername('backenduser');
-        $user->setEmail('backenduser@cosa.co');
-        $user->setPlainPassword('backenduser');
+        $user->setUsername('jorgepalacios');
+        $user->setEmail('jorgepalacios@jorgepalacios.es');
+        $user->setPlainPassword('jorgepalacios');
         $user->setEnabled(true);
         $user->setRoles(array('ROLE_ADMIN'));
         $user->setConfirmationToken(null);

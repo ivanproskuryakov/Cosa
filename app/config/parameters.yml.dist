@@ -9,7 +9,7 @@ parameters:
     mailer_transport:  smtp
     mailer_user:       ~
     mailer_password:   ~
-#    mailer_host:       127.0.0.1
+    mailer_host:       127.0.0.1
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
